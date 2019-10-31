@@ -12,9 +12,10 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //interval timer
-    var intervalTimer1 = Timer()
+    var intervalTimer = Timer()
+    
     //interval timer
-    var intervalTimer2 = Timer()
+    
     
     // MARK: Outlets
     // ---------------------
@@ -44,6 +45,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func runtimer(){
         HealthTimer.start()
         HungerTimer.start()
+    }
+    func resetTimer(){
+        let interval:TimeInterval = 100.0
+        stopTimer()
+        let time  = NSDate(timeIntervalSinceNow: interval)
+        runtimer()
+        if intervalTimer.isValid{
+            intervalTimer.invalidate()
+        }
+         
+    }
+    func stopTimer(){
+        HealthTimer.stop()
+        HungerTimer.stop()
     }
     // 3. Get messages from PHONE
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
@@ -135,10 +150,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func feedButtonPressed() {
         print("Feed button pressed")
+        resetTimer()
     }
     
     @IBAction func hibernateButtonPressed() {
         print("Hibernate button pressed")
+        stopTimer()
         if (WCSession.default.isReachable) {
                 print("Reachable")
 

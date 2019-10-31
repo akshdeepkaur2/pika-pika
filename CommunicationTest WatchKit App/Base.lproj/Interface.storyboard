@@ -63,12 +63,12 @@
                             </items>
                         </group>
                         <label width="67" height="23" alignment="left" text="Health" id="OHY-Dm-fwj"/>
-                        <timer width="51" alignment="left" id="ydw-f8-Rjl">
+                        <timer width="51" alignment="left" previewedSeconds="100" id="ydw-f8-Rjl">
                             <calendarUnit key="units" second="YES"/>
                         </timer>
                         <label alignment="left" text="Hunger" id="3qx-vb-qpc"/>
-                        <timer alignment="left" id="V7q-Ni-Nx2">
-                            <calendarUnit key="units" second="YES"/>
+                        <timer alignment="left" previewedSeconds="3598" id="V7q-Ni-Nx2">
+                            <calendarUnit key="units" minute="YES"/>
                         </timer>
                     </items>
                     <connections>
