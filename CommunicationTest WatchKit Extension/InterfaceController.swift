@@ -127,6 +127,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func hibernateButtonPressed() {
         print("Hibernate button pressed")
+        if (WCSession.default.isReachable) {
+                print("Reachable")
+
+                if (WCSession.default.isReachable) {
+                    print("Reachable")
+                    let abc = ["Wait": "Pokemon is hibernating right now"]
+                    WCSession.default.sendMessage( abc
+                        ,replyHandler: {replyMessage in
+                            self.outputLabel.setText(replyMessage["status"] as? String)
+                    }, errorHandler: {error in print( error.localizedDescription)})
+                }
+        }
+        }
     }
     
-}
+
