@@ -24,9 +24,9 @@
                                 <label height="20" alignment="left" text="Label" numberOfLines="2" id="PMJ-75-bao">
                                     <fontDescription key="font" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 </label>
+                                <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
                             </items>
                         </group>
-                        <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
                         <label alignment="center" text="Albert is hungry" id="QdJ-Fj-LrR">
                             <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                         </label>
@@ -62,19 +62,27 @@
                                 </button>
                             </items>
                         </group>
-                        <label alignment="center" text="HP: 100   Hunger: 0" id="Pt1-1p-5yN">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
-                        </label>
+                        <label width="67" height="23" alignment="left" text="Health" id="OHY-Dm-fwj"/>
+                        <timer width="51" alignment="left" id="ydw-f8-Rjl">
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
+                        <label alignment="left" text="Hunger" id="3qx-vb-qpc"/>
+                        <timer alignment="left" id="V7q-Ni-Nx2">
+                            <calendarUnit key="units" second="YES"/>
+                        </timer>
                     </items>
                     <connections>
+                        <outlet property="HealthLabel" destination="OHY-Dm-fwj" id="sSV-wv-z1e"/>
+                        <outlet property="HealthTimer" destination="ydw-f8-Rjl" id="eAq-cI-dFL"/>
+                        <outlet property="HungerLabel" destination="3qx-vb-qpc" id="Azw-K9-I8X"/>
+                        <outlet property="HungerTimer" destination="V7q-Ni-Nx2" id="zMx-e2-Yur"/>
                         <outlet property="messageLabel" destination="PMJ-75-bao" id="X1T-aZ-hg2"/>
                         <outlet property="nameLabel" destination="QdJ-Fj-LrR" id="HAA-SN-3Fj"/>
-                        <outlet property="outputLabel" destination="Pt1-1p-5yN" id="Ojk-s6-fYf"/>
                         <outlet property="pokemonImageView" destination="RxI-YZ-AgM" id="Cu6-PZ-z19"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="555" y="31.5"/>
+            <point key="canvasLocation" x="555" y="30.5"/>
         </scene>
         <!--Screen2 Sample-->
         <scene sceneID="rSw-iR-0SS">
@@ -106,6 +114,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="562" y="382"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="xqQ-Kr-DHM">
+            <objects>
+                <controller id="rd3-CU-C54"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="-140"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="e2u-ca-V4p">

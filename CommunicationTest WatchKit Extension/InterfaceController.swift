@@ -11,7 +11,10 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-
+    //interval timer
+    var intervalTimer1 = Timer()
+    //interval timer
+    var intervalTimer2 = Timer()
     
     // MARK: Outlets
     // ---------------------
@@ -24,8 +27,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // Label for other messages (HP:100, Hunger:0)
     @IBOutlet var outputLabel: WKInterfaceLabel!
     
+    @IBOutlet var HealthLabel: WKInterfaceLabel!
     
+    @IBOutlet var HealthTimer: WKInterfaceTimer!
     
+    @IBOutlet var HungerLabel: WKInterfaceLabel!
+    @IBOutlet var HungerTimer: WKInterfaceTimer!
     // MARK: Delegate functions
     // ---------------------
 
@@ -34,6 +41,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         //@TODO
     }
     
+    func runtimer(){
+        HealthTimer.start()
+        HungerTimer.start()
+    }
     // 3. Get messages from PHONE
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("WATCH: Got message from Phone")
@@ -119,6 +130,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     @IBAction func startButtonPressed() {
         print("Start button pressed")
+        runtimer()
     }
     
     @IBAction func feedButtonPressed() {
