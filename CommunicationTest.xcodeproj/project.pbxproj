@@ -20,6 +20,7 @@
 		05E95235236494EA00AA7287 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E95234236494EA00AA7287 /* InterfaceController.swift */; };
 		05E95237236494EA00AA7287 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E95236236494EA00AA7287 /* ExtensionDelegate.swift */; };
 		05E95239236494EA00AA7287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E95238236494EA00AA7287 /* Assets.xcassets */; };
+		1917A4B8236B36950096E560 /* GiveName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917A4B7236B36950096E560 /* GiveName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		05E95236236494EA00AA7287 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		05E95238236494EA00AA7287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05E9523A236494EA00AA7287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1917A4B7236B36950096E560 /* GiveName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				05E95238236494EA00AA7287 /* Assets.xcassets */,
 				05E9523A236494EA00AA7287 /* Info.plist */,
 				05987CEF236B0DFB0039757C /* Screen2Sample.swift */,
+				1917A4B7236B36950096E560 /* GiveName.swift */,
 			);
 			path = "CommunicationTest WatchKit Extension";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05987CF0236B0DFB0039757C /* Screen2Sample.swift in Sources */,
+				1917A4B8236B36950096E560 /* GiveName.swift in Sources */,
 				05E95237236494EA00AA7287 /* ExtensionDelegate.swift in Sources */,
 				05E95235236494EA00AA7287 /* InterfaceController.swift in Sources */,
 			);
