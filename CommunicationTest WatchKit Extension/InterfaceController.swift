@@ -41,7 +41,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         let messageBody = message["course"] as! String
         messageLabel.setText(messageBody)
     }
-    
+    //4. get image from phone
+    func session(session: WCSession, didReceiveMessageData messageData: NSData, replyHandler: (NSData) -> Void) {
+
+         let image = UIImage(data: messageData as Data)
+        pokemonImageView.setImage(image)
+        
+        }
+
+        
+
+      
 
 
     
